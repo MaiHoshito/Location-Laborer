@@ -11,6 +11,7 @@ Location-Laborer 是一款使用 python 编程语言开发的应用，它可以�
 
 **使用 Location-Laborer 需要先申请高德地图应用 Key。申请步骤相当简单且无需等待，请参考高德地图官方文档[成为开发者并创建 key](https://lbs.amap.com/api/webservice/guide/create-project/get-key)**
 
+这里是一个操作示范视频：
 [![Getting Started with Location-Laborer](https://img.youtube.com/vi/DUaZFWqIZ_w/sddefault.jpg)](https://youtu.be/DUaZFWqIZ_w)
 
 ---
