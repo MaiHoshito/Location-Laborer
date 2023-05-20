@@ -5,7 +5,7 @@
 Location-Laborer 是一款使用 python 编程语言开发的应用，它可以帮助用户处理缺少省、市、区信息的不完整地址。该应用基于高德地图的输入提示与地理编码产品，为用户提供可能的完整地址建议，并获取该地址对应的经纬度。该应用旨在提高研究者补全地址的效率，节省研究者的时间和精力。
 
 - 输入提示：当用户输入地址的部分信息时，应用会给出补全建议。相比于地理编码的结构化地址，输入提示基于关键词进行查询，与地理编码相同，输入提示也可以返回建议地址的经纬度信息。
-- 地理编码：当用户输入地址（包括不完整地址）时，应用会根据高德地图的地理编码接口，将地址转换为经纬度坐标，方便研究者进行后续的暴露评估。
+- 地理编码：当用户输入地址（包括不完整地址）时，应用会使用高德地图的地理编码接口，将地址转换为经纬度坐标，方便研究者进行后续的暴露评估。
 - 目前仅支持导入包含不完整地址列的`csv`文件（UTF-8 编码）进行后续操作，暂不支持直接输入地址 ~~（如果不完整地址数量少到手动就可以打完的话那也根本不需要这个玩意儿了 orz）~~
 - 导入`csv`文件后会检查`final_address`, `final_lon`, `final_lat`, `geo_info`, `suggest_info`这几列的存在，如果不存在则创建相应列，如果已存在会从顺数第一空白行开始（做不完可以先导出，再导入就会从上次没完成的地方开始）
 
@@ -25,7 +25,7 @@ Location-Laborer is an application developed using the Python programming langua
 - Input prompt: When a user enters part of an address, the application provides suggestions for completing it. Unlike geocoding, which uses structured addresses, input prompts query based on keywords. Like geocoding, input prompts can also return the latitude and longitude information of the suggested address.
 - Geocoding: When a user enters an address, including an incomplete one, the application uses Amap’s geocoding services to convert the address into latitude and longitude coordinates. This allows researchers to conduct subsequent exposure assessments.
 - Location-Laborer only supports importing UTF-8 encoding `csv` files that contain one column with incomplete addresses for subsequent operations. It does not support directly typing in addresses currently.
-- Upon importing a CSV file, Location-Laborer checks for the existence of the `final_address`, `final_lon`, `final_lat`, `geo_info`, and `suggest_info` columns. If these columns do not exist, they will be created. If they already exist, the application will start with the first blank line in the sequence. In other words, if the process is not finished, you can export the file and continue from where you left off when you import it again.
+- Upon importing a `csv` file, Location-Laborer checks for the existence of the `final_address`, `final_lon`, `final_lat`, `geo_info`, and `suggest_info` columns. If these columns do not exist, they will be created. If they already exist, the application will start with the first blank line in the sequence. In other words, if the process is not finished, you can export the file and continue from where you left off when you import it again.
 
 **To use Location-Laborer, you must apply for an Amap application key. The application process is simple and does not require any waiting. Please refer to the Amap documentation on [Becoming a Developer and Creating a Key](https://lbs.amap.com/api/webservice/guide/create-project/get-key) for more information.**
 
