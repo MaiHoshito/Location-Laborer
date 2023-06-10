@@ -5,8 +5,9 @@ import pandas as pd
 import numpy as np
 import requests
 
-# Create a Tkinter window and sets its properties
+
 root = tk.Tk()
+# root.attributes("-fullscreen", True)
 root.state("zoomed")
 root.option_add("*Font", ("Microsoft YaHei", 15))
 root.option_add("*Foreground", "#3E2813")
@@ -15,11 +16,8 @@ root.option_add("*Button.background", "#E7C8A0")
 root.configure(bg='#FEFAE0')
 root.title('Location Laborer')
 
-# Define URLs for the Amap API
 suggest_url = 'https://restapi.amap.com/v3/assistant/inputtips?parameters'
 geocode_url = 'https://restapi.amap.com/v3/geocode/geo?parameters'
-
-# Initialize the cols and key variable
 cols = [None] * 3
 key = None
 
@@ -255,7 +253,7 @@ def on_button2():
     global current_row, suggest_info, geo_info, cols
     df.at[current_row, 'suggest_info'] = str(suggest_info)
     df.at[current_row, 'geo_info'] = str(geo_info)
-    df.at[current_row, 'final_address'] = cols[1]
+    df.at[current_row, 'final_address'] = cols[2]
     df.at[current_row, 'final_lon'] = geo_info['location'].split(",")[0]
     df.at[current_row, 'final_lat'] = geo_info['location'].split(",")[1]
     on_next()
